@@ -10,6 +10,10 @@ namespace LevelEditor
         [HideInInspector] public int waveIndex;
         [HideInInspector] public bool intervalChangedManualy;
         [HideInInspector] public bool moveSpeedChangedManualy;
+        [Foldout("Fixed Variables")] public TextMeshPro waveIndexText;
+        [Foldout("Fixed Variables")] public TextMeshPro IntervalText;
+        [Foldout("Fixed Variables")] public TextMeshPro moveSpeedText;
+        [Foldout("Fixed Variables")] public MeshRenderer planeMesh;
         public float interval;
         public float enemyMoveSpeed;
 
@@ -26,14 +30,14 @@ namespace LevelEditor
 
             intervalChangedManualy = true;
             UpdateTexts();
-            FindFirstObjectByType<LevelEditor>().UpdateTotalDuration();
+            FindObjectOfType<LevelEditor>().UpdateTotalDuration();
         }
 
         [Button]
         public void ResetIntervalValue()
         {
             intervalChangedManualy = false;
-            FindFirstObjectByType<LevelEditor>().UpdateAllIntervalValues();
+            FindObjectOfType<LevelEditor>().UpdateAllIntervalValues();
         }
 
         [Button]
@@ -53,13 +57,10 @@ namespace LevelEditor
         public void ResetEnemyMoveSpeed()
         {
             moveSpeedChangedManualy = false;
-            FindFirstObjectByType<LevelEditor>().UpdateAllMoveSpeedValues();
+            FindObjectOfType<LevelEditor>().UpdateAllMoveSpeedValues();
         }
 
-        [Foldout("Fixed Variables")] public TextMeshPro waveIndexText;
-        [Foldout("Fixed Variables")] public TextMeshPro IntervalText;
-        [Foldout("Fixed Variables")] public TextMeshPro moveSpeedText;
-        [Foldout("Fixed Variables")] public MeshRenderer planeMesh;
+        
 
         public void UpdateTexts()
         {
