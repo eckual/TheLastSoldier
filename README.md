@@ -1,14 +1,12 @@
 # The Last Soldier
 
-"The Last Soldier" is a 3D mobile game project developed with Unity game engine and C# language. The game is available on Google Play Store and App Store.
+"The Last Soldier" is a 3D mobile game project developed with Unity game engine and C# language. 
 
 
 ## Gameplay 
 
 
 https://github.com/fatihbestas/The_Last_Soldier/assets/33392778/ce58e0d6-b109-4336-8fbe-d5dca384e179
-
-
 
 
 This is a third-person shooter defense game where players can effortlessly control aiming mechanics with just one finger. The main challenge for the player is to think and act quickly, and destroy the enemies without hitting civilians.
