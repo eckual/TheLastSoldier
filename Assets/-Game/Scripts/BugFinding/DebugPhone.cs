@@ -46,7 +46,6 @@ public class DebugPhone : MonoBehaviour
         fpsAverage.text = ((int)fpsAverageValue).ToString();
         fpsMin.text = ((int)fpsMinValue).ToString();
         fpsMax.text = ((int)fpsMaxValue).ToString();
-
     }
    
     public void Restart()
@@ -56,7 +55,6 @@ public class DebugPhone : MonoBehaviour
 
     private void FpsCounter()
     {
-        // oyun basladiktan yaklasik 0.5 saniye sonra dogru sonuc vermeye baslar.
         deltaTimesForAverage[counterAverage] = Time.deltaTime;
         counterAverage = (counterAverage + 1) % deltaTimesForAverageArraySize;
 
@@ -74,7 +72,6 @@ public class DebugPhone : MonoBehaviour
         fpsMinValue = 1f / deltaTimesForAverage.Max();
 
         fpsMaxValue = 1f / deltaTimesForAverage.Min();
-
     }
 
 }
