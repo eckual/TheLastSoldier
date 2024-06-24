@@ -15,12 +15,11 @@ public class SpecialLaser : MonoBehaviour
 
     void Update()
     {
-   
-        if (Physics.Raycast(transform.position, transform.forward, out hit, MaxLength, TargetableAgentLayer))
-        {
-            agent = AllTargetableAgents.TargetableAgentColliderBond[hit.collider];
-            agent.TakeDamageByLaser();
-        }
-
+        if (!Physics.Raycast(transform.position, transform.forward, out hit, MaxLength, TargetableAgentLayer))
+            return;
+        
+        agent = AllTargetableAgents.TargetableAgentColliderBond[hit.collider];
+        agent.TakeDamageByLaser();
     }
+    
 }
