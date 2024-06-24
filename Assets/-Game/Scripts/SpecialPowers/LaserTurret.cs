@@ -39,4 +39,5 @@ public class LaserTurret : MonoBehaviour
         laser.SetActive(false);
         body.DORotate(startRotation, turnDuration, RotateMode.Fast).SetEase(Ease.InOutExpo);
     }
+    
 }
