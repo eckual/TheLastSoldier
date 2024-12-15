@@ -10,4 +10,5 @@ public class FloatingJoystick : MonoBehaviour
     {
         rectTransform = GetComponent<RectTransform>();
     }
+
 }
