@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class Gun : MonoBehaviour
 {
+    [SerializeField] private Animator muzzleFlashAnimator;
+    
     public GunData playerData;
     public FriendsGunData friendsData;
     public GunAnimationData animationData;
-
-    [SerializeField] private Animator muzzleFlashAnimator;
 
     private int currentLevel;
 
@@ -24,4 +24,5 @@ public class Gun : MonoBehaviour
     {
         return playerData.speed;
     }
+    
 }
